@@ -9,6 +9,7 @@ set -e  # Exit immediately if a command exits with a non-zero status
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}=== Cursor Reset Tool ===${NC}"
@@ -75,7 +76,8 @@ download_and_run_install_script() {
   while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
     if curl -fsSL https://raw.githubusercontent.com/yeongpin/cursor-free-vip/main/scripts/install.sh -o install.sh; then
       chmod +x install.sh
-      ./install.sh
+      ./install.sh || handle_error "Failed to execute installation script"
+      rm -f install.sh
       return 0
     else
       RETRY_COUNT=$((RETRY_COUNT + 1))

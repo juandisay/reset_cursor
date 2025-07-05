@@ -1,19 +1,16 @@
 # Cursor Reset Tool
 
-A comprehensive tool for resetting your Cursor editor identity by changing your MAC ID and machine identifiers.
+A simple tool for resetting your Cursor editor identity by changing your MAC ID and machine identifiers.
 
 ## Features
 
 - **MAC ID Reset**: Randomizes your MAC address for Wi-Fi interface
 - **Account Reset**: Resets machine identifiers used by Cursor
-- **Resilient Design**: Handles network issues and GitHub API rate limits
-- **Multiple Fallbacks**: Works even without internet connection using local scripts
 
 ## Prerequisites
 
 - macOS or Linux operating system
 - Homebrew (for macOS)
-- Python 3.x (for local script fallback)
 - Administrative privileges (for changing MAC address)
 
 ## Installation
@@ -37,7 +34,7 @@ Simply run the script:
 ./run.sh
 ```
 
-The script will guide you through the process with interactive prompts.
+The script will automatically perform the necessary operations.
 
 ### What the Script Does
 
@@ -47,38 +44,23 @@ The script will guide you through the process with interactive prompts.
    - Displays the old and new MAC addresses
 
 2. **Account Reset**
-   - Attempts to download and run the latest reset script
-   - Falls back to local script if GitHub is unreachable
-   - Handles GitHub API rate limits with multiple options
+   - Downloads and runs the latest reset script
    - Resets machine identifiers used by Cursor
 
 ## Troubleshooting
 
-### Network Connectivity Issues
+### Connection Issues
 
-If you encounter network connectivity issues:
-- The script will automatically check your internet connection
-- It will wait and retry if needed
-- If GitHub is unreachable, it will offer DNS fix options
+If you encounter connection issues, the script will retry up to 3 times with a 30-second delay between attempts.
 
-### GitHub API Rate Limit
+### Installation Failures
 
-If you hit GitHub API rate limits:
-1. Wait for the rate limit to reset (usually 1 hour)
-2. Use a VPN to change your IP address
-3. Use the local reset script instead
-
-### Local Script Fallback
-
-The script includes a non-interactive version of the machine ID reset that:
-- Works without internet connection
-- Directly modifies Cursor configuration files
-- Avoids making any GitHub API calls
+If the script fails to install spoof-mac or reset your account, it will display an error message and exit.
 
 ## File Structure
 
 - `run.sh` - Main script
-- `cursor-vip/reset_machine_id.py` - Original Python reset script
+- `cursor-vip/reset_machine_id.py` - Python reset script (not used by default)
 - `cursor_accounts.txt` - Optional file for storing account information
 
 ## License
