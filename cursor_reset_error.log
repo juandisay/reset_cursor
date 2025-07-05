@@ -1,0 +1,26 @@
+[2025-07-05 18:43:55] ERROR: Failed to execute installation script. Please check the error output above.
+[2025-07-05 18:45:02] ERROR: Failed to execute installation script. Please check the error output above.
+[2025-07-05 18:47:48] ERROR: Failed to execute installation script. Please check the error output above.
+[2025-07-05 19:01:09] ERROR: Failed to execute installation script
+Error Code: 1
+Command: echo "Command: $BASH_COMMAND"
+Line Number: 186
+Additional Info: Last output:\n   ██████╗██╗   ██╗██████╗ ███████╗ ██████╗ ██████╗      ██████╗ ██████╗  ██████╗   
+  ██╔════╝██║   ██║██╔══██╗██╔════╝██╔═══██╗██╔══██╗     ██╔══██╗██╔══██╗██╔═══██╗  
+  ██║     ██║   ██║██████╔╝███████╗██║   ██║██████╔╝     ██████╔╝██████╔╝██║   ██║  
+  ██║     ██║   ██║██╔══██╗╚════██║██║   ██║██╔══██╗     ██╔═══╝ ██╔══██╗██║   ██║  
+  ╚██████╗╚██████╔╝██║  ██║███████║╚██████╔╝██║  ██║     ██║     ██║  ██║╚██████╔╝  
+   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝     ╚═╝     ╚═╝  ╚═╝ ╚═════╝  
+[0m
+[0;36mℹ️ Checking latest version...[0m
+[0;31m❌ Failed to parse version from GitHub API response:
+{"message":"API rate limit exceeded for 103.190.47.4. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+System: Darwin shit-mac.local 21.6.0 Darwin Kernel Version 21.6.0: Mon Jun 24 00:59:34 PDT 2024; root:xnu-8020.240.18.709.2~1/RELEASE_ARM64_T8101 arm64
+-----------------------------------
+[2025-07-05 19:01:09] ERROR: Account reset failed
+Error Code: 10
+Command: echo "Command: $BASH_COMMAND"
+Line Number: 249
+Additional Info: Cursor version: Unknown
+System: Darwin shit-mac.local 21.6.0 Darwin Kernel Version 21.6.0: Mon Jun 24 00:59:34 PDT 2024; root:xnu-8020.240.18.709.2~1/RELEASE_ARM64_T8101 arm64
+-----------------------------------
